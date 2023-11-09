@@ -27,7 +27,7 @@ router.get('/api/expires', async (ctx) => {
 router.get('/api/cache-control', async (ctx) => {
   ctx.status = 200;
   ctx.body = 111111111;
-  ctx.set('Cache-Control', `max-age=120`);
+  ctx.set('Cache-Control', `public,max-age=120`);
 });
 
 app.use(router.routes()).use(router.allowedMethods());
